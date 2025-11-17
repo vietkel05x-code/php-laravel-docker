@@ -1,0 +1,34 @@
+/**
+ * Admin Reset CSS
+ * Complete reset for admin pages to prevent conflicts
+ */
+
+/* Reset everything for admin pages */
+html.admin-html {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+html.admin-html *,
+html.admin-html *::before,
+html.admin-html *::after {
+  box-sizing: border-box;
+}
+
+body.admin-body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  background: #f5f7fa !important;
+  color: #333 !important;
+  line-height: 1.6 !important;
+  position: relative !important;
+}
+

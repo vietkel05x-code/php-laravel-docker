@@ -1,0 +1,51 @@
+/**
+ * Alert Component - Reusable alert messages
+ * Used for success, error, warning, info messages
+ */
+
+.alert {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-base);
+  border: 1px solid;
+}
+
+.alert--success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  border-color: var(--color-success-border);
+}
+
+.alert--error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+  border-color: var(--color-error-border);
+}
+
+.alert--warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning-text);
+  border-color: var(--color-warning-border);
+}
+
+.alert--info {
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+  border-color: var(--color-info);
+}
+
+.alert__title {
+  font-weight: bold;
+  margin-bottom: var(--spacing-xs);
+}
+
+.alert__list {
+  margin: 0;
+  padding-left: var(--spacing-xl);
+}
+
+.alert__list-item {
+  margin-bottom: var(--spacing-xs);
+}
+

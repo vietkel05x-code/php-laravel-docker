@@ -1,0 +1,206 @@
+/**
+ * Admin Pages Styles
+ * Page-specific styles for dashboard, statistics, etc.
+ */
+
+/* Dashboard Grid */
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Statistics Pages */
+.admin-statistics-page {
+  max-width: 1400px;
+  margin: var(--spacing-2xl) auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.admin-statistics-page__title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-statistics-filters {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-statistics-filters__form {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.admin-statistics-filters__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-statistics-filters__label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: bold;
+  font-size: var(--font-size-base);
+}
+
+.admin-statistics-filters__input,
+.admin-statistics-filters__select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+}
+
+.admin-statistics-filters__button {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color var(--transition-base);
+}
+
+.admin-statistics-filters__button:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Summary Cards */
+.admin-summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.admin-summary-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.admin-summary-card__label {
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-base);
+}
+
+.admin-summary-card__value {
+  margin: 0;
+  font-size: var(--font-size-3xl);
+  font-weight: bold;
+}
+
+.admin-summary-card__value--primary {
+  color: var(--color-primary);
+}
+
+.admin-summary-card__value--info {
+  color: #17a2b8;
+}
+
+.admin-summary-card__value--success {
+  color: var(--color-success);
+}
+
+.admin-summary-card__meta {
+  margin: var(--spacing-sm) 0 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Chart Container */
+.admin-chart-container {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.admin-chart-container__title {
+  margin: 0 0 var(--spacing-lg) 0;
+  font-size: var(--font-size-xl);
+}
+
+.admin-chart-container__canvas {
+  max-height: 400px;
+}
+
+/* Payment Method List */
+.admin-payment-list {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.admin-payment-item {
+  padding: var(--spacing-md);
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+}
+
+.admin-payment-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-payment-item__name {
+  margin: 0;
+  font-weight: bold;
+  font-size: var(--font-size-md);
+}
+
+.admin-payment-item__value {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .admin-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-form__grid--2,
+  .admin-form__grid--3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .admin-section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .admin-lesson {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .admin-statistics-filters__form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

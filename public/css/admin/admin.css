@@ -1,0 +1,26 @@
+/**
+ * Admin CSS Main File
+ * Imports all admin CSS modules
+ */
+
+/* Import reset first to override any conflicting styles */
+@import url('reset.css');
+
+/* Import variables */
+@import url('../variables.css');
+
+/* Import layout styles (sidebar, header) */
+@import url('layout.css');
+
+/* Import base components that admin uses */
+@import url('../components/alert.css');
+@import url('../components/button.css');
+@import url('../components/card.css');
+
+/* Import admin modules */
+@import url('base.css');
+@import url('components.css');
+@import url('pages.css');
+@import url('auth.css');
+@import url('profile.css');
+

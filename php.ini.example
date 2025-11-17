@@ -1,0 +1,19 @@
+; PHP Configuration for E-Learning Platform
+; Copy this to your php.ini or create a .user.ini file in your project root
+; Configured for 1.3GB file upload support
+
+; Maximum allowed size for uploaded files (1.3GB + buffer)
+upload_max_filesize = 1500M
+
+; Maximum size of POST data that PHP will accept (must be >= upload_max_filesize)
+post_max_size = 1500M
+
+; Maximum execution time of each script, in seconds (1 hour for large uploads)
+max_execution_time = 3600
+
+; Maximum amount of time each script may spend parsing request data
+max_input_time = 3600
+
+; Maximum amount of memory a script may consume (2GB for large file processing)
+memory_limit = 2048M
+

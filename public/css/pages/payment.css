@@ -1,0 +1,233 @@
+/**
+ * Payment Pages Styles
+ * Bank transfer and payment gateway pages
+ */
+
+.bank-transfer-page {
+  max-width: 800px;
+  margin: var(--spacing-2xl) auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.bank-transfer-page__title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.bank-transfer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.bank-info__card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.bank-info__title {
+  margin: 0 0 var(--spacing-lg) 0;
+  font-size: var(--font-size-xl);
+  color: #1e293b;
+}
+
+.bank-info__list {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.bank-info__item {
+  padding: var(--spacing-md);
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+}
+
+.bank-info__item-label {
+  color: #6b7280;
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-base);
+}
+
+.bank-info__item-value {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.bank-info__item-value--mono {
+  font-family: monospace;
+}
+
+.bank-info__item-value--price {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+}
+
+.bank-info__copy-button {
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: background-color var(--transition-base);
+}
+
+.bank-info__copy-button:hover {
+  background: var(--color-primary-dark);
+}
+
+.order-summary__card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.order-summary__title {
+  margin: 0 0 var(--spacing-lg) 0;
+  font-size: var(--font-size-xl);
+  color: #1e293b;
+}
+
+.order-summary__item {
+  margin-bottom: var(--spacing-md);
+}
+
+.order-summary__item-label {
+  color: #6b7280;
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: var(--font-size-base);
+}
+
+.order-summary__item-value {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.order-summary__item-value--price {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+}
+
+.order-summary__divider {
+  margin: var(--spacing-lg) 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.order-summary__note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.order-summary__note-text {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: #92400e;
+}
+
+.confirmation-form__card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.confirmation-form__title {
+  margin: 0 0 var(--spacing-lg) 0;
+  font-size: var(--font-size-lg);
+  color: #1e293b;
+}
+
+.confirmation-form__field {
+  margin-bottom: var(--spacing-md);
+}
+
+.confirmation-form__label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+}
+
+.confirmation-form__input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-base);
+}
+
+.confirmation-form__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(164, 53, 240, 0.1);
+}
+
+.confirmation-form__textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  resize: vertical;
+  transition: border-color var(--transition-base);
+}
+
+.confirmation-form__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(164, 53, 240, 0.1);
+}
+
+.confirmation-form__submit {
+  width: 100%;
+  padding: var(--spacing-md);
+  background: var(--color-success);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.confirmation-form__submit:hover {
+  background: #218838;
+}
+
+.confirmation-form__back-link {
+  display: block;
+  text-align: center;
+  margin-top: var(--spacing-md);
+  color: #6b7280;
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  transition: color var(--transition-base);
+}
+
+.confirmation-form__back-link:hover {
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .bank-transfer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
