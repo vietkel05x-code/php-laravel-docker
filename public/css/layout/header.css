@@ -26,6 +26,19 @@
     gap: 20px;
 }
 
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #111827;
+}
+.menu-toggle i { font-size: 18px; }
+
 .logo {
     font-size: 24px;
     font-weight: 700;
@@ -381,4 +394,38 @@
 }
 .plus-section strong {
     color: #0056d2;
+}
+
+/* ====== MOBILE ====== */
+@media (max-width: 992px) {
+    .menu-toggle { display: inline-flex; }
+
+    .navbar {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding: 10px 16px;
+    }
+    .navbar-left { flex: 1; justify-content: space-between; gap: 12px; }
+    .logo { font-size: 20px; }
+
+    /* Collapse sections by default */
+    .primary-nav,
+    .navbar-center,
+    .navbar-right { display: none; width: 100%; }
+
+    /* Expanded state */
+    .navbar.open .primary-nav,
+    .navbar.open .navbar-center,
+    .navbar.open .navbar-right { display: block; }
+
+    .primary-nav { margin-top: 8px; }
+    .primary-nav a { display: inline-block; margin: 8px 12px 0 0; }
+
+    .navbar-center { order: 3; margin: 8px 0 0 0; max-width: 100%; }
+    .search-box { height: 44px; }
+
+    .navbar-right { order: 4; display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+    .header-icon-btn { width: 40px; height: 40px; }
+    .login-link { font-size: 14px; }
+    .register-btn { padding: 6px 12px; font-size: 14px; }
 }

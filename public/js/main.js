@@ -150,6 +150,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile nav toggle
+    const headerEl = document.getElementById('mainHeader');
+    const toggleBtn = document.getElementById('menuToggle');
+    if (headerEl && toggleBtn) {
+        toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            headerEl.classList.toggle('open');
+        });
+
+        document.addEventListener('click', () => {
+            headerEl.classList.remove('open');
+        });
+
+        // Keep menu open when clicking inside header areas
+        headerEl.addEventListener('click', (e) => e.stopPropagation());
+
+        // Close on resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) headerEl.classList.remove('open');
+        });
+    }
     const avatarBtn = document.getElementById('avatarBtn');
     const dropdown = document.getElementById('userDropdown');
 

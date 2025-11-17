@@ -12,8 +12,11 @@
 <body>
     <header class="navbar" id="mainHeader">
         <div class="navbar-left">
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <h1 class="logo"><a href="{{ route('home') }}"><span class="logo-e">E</span><span class="highlight">LEARNING</span></a></h1>
-            <nav>
+            <nav class="primary-nav">
                 <a href="{{ route('courses.index') }}">Khám phá</a>
                 @auth
                     <a href="{{ route('student.courses') }}">Khóa học của tôi</a>
