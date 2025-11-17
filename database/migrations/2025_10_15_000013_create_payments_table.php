@@ -11,13 +11,12 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('order_id');
-            $table->enum('provider', ['bank_transfer', 'vnpay', 'momo', 'paypal']);
+            $table->string('provider', 30);
             $table->string('transaction_id', 100)->nullable();
             $table->decimal('amount', 10, 2);
-            $table->enum('status', ['initiated', 'succeeded', 'failed', 'refunded'])->default('initiated');
+            $table->string('status', 20)->default('initiated');
             $table->json('meta')->nullable();
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             
             $table->index('order_id', 'fk_payments_order');
             $table->index(['provider', 'status'], 'idx_payments_provider_status');

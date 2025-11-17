@@ -13,8 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('course_id');
             $table->string('title', 255);
             $table->unsignedInteger('position')->default(0);
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             
             $table->index(['course_id', 'position'], 'idx_sections_course_pos');
             

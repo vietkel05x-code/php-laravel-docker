@@ -15,8 +15,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image', 255)->nullable();
             $table->unsignedBigInteger('parent_id')->nullable();
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             
             $table->foreign('parent_id', 'fk_categories_parent')
                   ->references('id')

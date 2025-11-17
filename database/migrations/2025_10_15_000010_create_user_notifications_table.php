@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('user_notifications', function (Blueprint $table) {
             $table->unsignedBigInteger('notification_id');
             $table->unsignedBigInteger('user_id');
-            $table->dateTime('read_at')->nullable();
+            $table->timestamp('read_at')->nullable();
             
             $table->primary(['notification_id', 'user_id']);
             $table->index('user_id', 'fk_un_user');

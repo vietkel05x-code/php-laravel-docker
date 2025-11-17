@@ -14,11 +14,10 @@ return new class extends Migration
             $table->string('email', 255)->unique();
             $table->string('avatar', 255)->nullable();
             $table->string('password', 255);
-            $table->enum('role', ['student', 'admin'])->default('student');
-            $table->dateTime('email_verified_at')->nullable();
+            $table->string('role', 20)->default('student');
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('remember_token', 100)->nullable();
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             
             $table->index('role', 'idx_users_role');
         });

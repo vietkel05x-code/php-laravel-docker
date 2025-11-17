@@ -13,8 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('order_id');
             $table->unsignedBigInteger('course_id');
             $table->decimal('price', 10, 2);
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             
             $table->unique(['order_id', 'course_id'], 'uq_item_order_course');
             $table->index('course_id', 'fk_items_course');

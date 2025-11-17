@@ -11,14 +11,13 @@ return new class extends Migration
         Schema::create('coupons', function (Blueprint $table) {
             $table->id();
             $table->string('code', 40)->unique();
-            $table->enum('type', ['percent', 'fixed']);
+            $table->string('type', 20);
             $table->decimal('value', 10, 2);
-            $table->dateTime('starts_at')->nullable();
-            $table->dateTime('ends_at')->nullable();
+            $table->timestamp('starts_at')->nullable();
+            $table->timestamp('ends_at')->nullable();
             $table->unsignedInteger('max_uses')->nullable();
             $table->unsignedInteger('uses')->default(0);
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             
             $table->index(['starts_at', 'ends_at'], 'idx_coupons_active_window');
         });

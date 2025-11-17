@@ -20,8 +20,7 @@ return new class extends Migration
             $table->unsignedInteger('duration')->default(0);
             $table->boolean('is_preview')->default(false);
             $table->unsignedInteger('position')->default(0);
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             
             $table->index(['section_id', 'position'], 'idx_lessons_section_pos');
             

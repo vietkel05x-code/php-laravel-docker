@@ -12,9 +12,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('lesson_id');
-            $table->dateTime('completed_at')->nullable();
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamp('completed_at')->nullable();
+            $table->timestamps();
             
             $table->unique(['user_id', 'lesson_id'], 'uq_progress_user_lesson');
             $table->index('lesson_id', 'fk_progress_lesson');

@@ -12,10 +12,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('course_id');
-            $table->enum('status', ['active', 'revoked'])->default('active');
-            $table->dateTime('enrolled_at');
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->string('status', 20)->default('active');
+            $table->timestamp('enrolled_at');
+            $table->timestamps();
             
             $table->unique(['user_id', 'course_id'], 'uq_enroll_user_course');
             $table->index('course_id', 'idx_enroll_course');

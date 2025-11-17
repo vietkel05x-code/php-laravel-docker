@@ -22,5 +22,10 @@ class AppServiceProvider extends ServiceProvider
         // Set default pagination view
         \Illuminate\Pagination\Paginator::defaultView('vendor.pagination.default');
         \Illuminate\Pagination\Paginator::defaultSimpleView('vendor.pagination.simple-default');
+        
+        // Force HTTPS in production
+        if (config('app.env') === 'production') {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
     }
 }

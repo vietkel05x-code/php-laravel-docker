@@ -14,8 +14,7 @@ return new class extends Migration
             $table->unsignedBigInteger('course_id');
             $table->unsignedTinyInteger('rating');
             $table->text('content')->nullable();
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             
             $table->unique(['user_id', 'course_id'], 'uq_review_user_course');
             $table->index('course_id', 'idx_reviews_course');

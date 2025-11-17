@@ -15,9 +15,8 @@ return new class extends Migration
             $table->decimal('subtotal', 10, 2);
             $table->decimal('discount', 10, 2)->default(0.00);
             $table->decimal('total', 10, 2);
-            $table->enum('status', ['pending', 'paid', 'failed', 'cancelled', 'refunded'])->default('pending');
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->string('status', 20)->default('pending');
+            $table->timestamps();
             
             $table->index('user_id', 'fk_orders_user');
             $table->index(['status', 'created_at'], 'idx_orders_status_created');
