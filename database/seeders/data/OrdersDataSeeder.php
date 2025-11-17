@@ -1,0 +1,275 @@
+<?php
+
+namespace Database\Seeders\Data;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class OrdersDataSeeder extends Seeder
+{
+    public function run(): void
+    {
+        // Clear existing data
+        DB::table('orders')->truncate();
+        
+        $data = [
+  0 => [
+    'id' => 1,
+    'user_id' => 2,
+    'code' => 'ORD-CSZN5QIX',
+    'subtotal' => '550000.00',
+    'discount' => '0.00',
+    'total' => '550000.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-11 19:13:45',
+    'updated_at' => '2025-11-11 19:13:45',
+  ],
+  1 => [
+    'id' => 2,
+    'user_id' => 1,
+    'code' => 'ORD-YUGQ5ICC',
+    'subtotal' => '379000.00',
+    'discount' => '0.00',
+    'total' => '379000.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-11 19:30:40',
+    'updated_at' => '2025-11-11 19:30:40',
+  ],
+  2 => [
+    'id' => 3,
+    'user_id' => 1,
+    'code' => 'ORD-EY3AIHXR',
+    'subtotal' => '449000.00',
+    'discount' => '0.00',
+    'total' => '449000.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-11 19:43:22',
+    'updated_at' => '2025-11-11 19:43:22',
+  ],
+  3 => [
+    'id' => 4,
+    'user_id' => 2,
+    'code' => 'ORD-CDUVMUXR',
+    'subtotal' => '699000.00',
+    'discount' => '0.00',
+    'total' => '699000.00',
+    'status' => 'pending',
+    'created_at' => '2025-11-12 09:46:10',
+    'updated_at' => '2025-11-12 09:46:10',
+  ],
+  4 => [
+    'id' => 5,
+    'user_id' => 2,
+    'code' => 'ORD-LUVNNZFH',
+    'subtotal' => '699000.00',
+    'discount' => '0.00',
+    'total' => '699000.00',
+    'status' => 'pending',
+    'created_at' => '2025-11-12 10:13:53',
+    'updated_at' => '2025-11-12 10:13:53',
+  ],
+  5 => [
+    'id' => 6,
+    'user_id' => 2,
+    'code' => 'ORD-Q81OTWUL',
+    'subtotal' => '699000.00',
+    'discount' => '0.00',
+    'total' => '699000.00',
+    'status' => 'failed',
+    'created_at' => '2025-11-12 10:14:06',
+    'updated_at' => '2025-11-12 10:14:11',
+  ],
+  6 => [
+    'id' => 7,
+    'user_id' => 2,
+    'code' => 'ORD-QUQ23FMM',
+    'subtotal' => '699000.00',
+    'discount' => '0.00',
+    'total' => '699000.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-12 10:14:36',
+    'updated_at' => '2025-11-12 10:14:42',
+  ],
+  7 => [
+    'id' => 8,
+    'user_id' => 2,
+    'code' => 'ORD-ERO6QXXB',
+    'subtotal' => '379000.00',
+    'discount' => '0.00',
+    'total' => '379000.00',
+    'status' => 'pending',
+    'created_at' => '2025-11-12 10:19:51',
+    'updated_at' => '2025-11-12 10:19:51',
+  ],
+  8 => [
+    'id' => 9,
+    'user_id' => 2,
+    'code' => 'ORD-QNPGICZH',
+    'subtotal' => '379000.00',
+    'discount' => '0.00',
+    'total' => '379000.00',
+    'status' => 'failed',
+    'created_at' => '2025-11-12 10:24:02',
+    'updated_at' => '2025-11-12 10:27:17',
+  ],
+  9 => [
+    'id' => 10,
+    'user_id' => 2,
+    'code' => 'ORD-YCENTADD',
+    'subtotal' => '379000.00',
+    'discount' => '0.00',
+    'total' => '379000.00',
+    'status' => 'failed',
+    'created_at' => '2025-11-12 10:29:37',
+    'updated_at' => '2025-11-12 10:39:44',
+  ],
+  10 => [
+    'id' => 11,
+    'user_id' => 2,
+    'code' => 'ORD-QAPDIF2D',
+    'subtotal' => '379000.00',
+    'discount' => '0.00',
+    'total' => '379000.00',
+    'status' => 'failed',
+    'created_at' => '2025-11-12 10:42:41',
+    'updated_at' => '2025-11-12 10:52:57',
+  ],
+  11 => [
+    'id' => 12,
+    'user_id' => 2,
+    'code' => 'ORD-G4WO92WG',
+    'subtotal' => '379000.00',
+    'discount' => '0.00',
+    'total' => '379000.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-12 10:53:04',
+    'updated_at' => '2025-11-12 10:53:25',
+  ],
+  12 => [
+    'id' => 13,
+    'user_id' => 2,
+    'code' => 'ORD-RWIW2UDC',
+    'subtotal' => '579000.00',
+    'discount' => '0.00',
+    'total' => '579000.00',
+    'status' => 'failed',
+    'created_at' => '2025-11-12 11:50:02',
+    'updated_at' => '2025-11-12 11:50:11',
+  ],
+  13 => [
+    'id' => 14,
+    'user_id' => 2,
+    'code' => 'ORD-GJ1ZIL3W',
+    'subtotal' => '579000.00',
+    'discount' => '0.00',
+    'total' => '579000.00',
+    'status' => 'failed',
+    'created_at' => '2025-11-12 11:50:28',
+    'updated_at' => '2025-11-12 11:50:56',
+  ],
+  14 => [
+    'id' => 15,
+    'user_id' => 2,
+    'code' => 'ORD-JG9K7ORS',
+    'subtotal' => '978000.00',
+    'discount' => '0.00',
+    'total' => '978000.00',
+    'status' => 'failed',
+    'created_at' => '2025-11-12 12:20:34',
+    'updated_at' => '2025-11-12 12:20:57',
+  ],
+  15 => [
+    'id' => 16,
+    'user_id' => 5,
+    'code' => 'ORD-TV8QEDFZ',
+    'subtotal' => '379000.00',
+    'discount' => '0.00',
+    'total' => '379000.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-12 17:57:50',
+    'updated_at' => '2025-11-12 17:58:24',
+  ],
+  16 => [
+    'id' => 17,
+    'user_id' => 2,
+    'code' => 'ORD-LHJAPSA0',
+    'subtotal' => '649000.00',
+    'discount' => '259600.00',
+    'total' => '389400.00',
+    'status' => 'failed',
+    'created_at' => '2025-11-14 17:21:15',
+    'updated_at' => '2025-11-14 17:21:27',
+  ],
+  17 => [
+    'id' => 18,
+    'user_id' => 2,
+    'code' => 'ORD-VEUSLD7I',
+    'subtotal' => '649000.00',
+    'discount' => '0.00',
+    'total' => '649000.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-15 04:04:42',
+    'updated_at' => '2025-11-15 04:05:18',
+  ],
+  18 => [
+    'id' => 19,
+    'user_id' => 3,
+    'code' => 'ORD-A99ERDRL',
+    'subtotal' => '379000.00',
+    'discount' => '0.00',
+    'total' => '379000.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-15 18:19:38',
+    'updated_at' => '2025-11-15 18:19:40',
+  ],
+  19 => [
+    'id' => 20,
+    'user_id' => 1,
+    'code' => 'ORD-1SS2AGDK',
+    'subtotal' => '0.00',
+    'discount' => '0.00',
+    'total' => '0.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-16 07:40:16',
+    'updated_at' => '2025-11-16 07:40:16',
+  ],
+  20 => [
+    'id' => 21,
+    'user_id' => 2,
+    'code' => 'ORD-OLDJ8H3V',
+    'subtotal' => '0.00',
+    'discount' => '0.00',
+    'total' => '0.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-16 15:40:35',
+    'updated_at' => '2025-11-16 15:40:35',
+  ],
+  21 => [
+    'id' => 22,
+    'user_id' => 5,
+    'code' => 'ORD-KSRYFYZN',
+    'subtotal' => '0.00',
+    'discount' => '0.00',
+    'total' => '0.00',
+    'status' => 'paid',
+    'created_at' => '2025-11-16 15:41:34',
+    'updated_at' => '2025-11-16 15:41:34',
+  ],
+];
+        
+        // Insert data
+        DB::table('orders')->insert($data);
+        
+        // Reset sequence if table has id column
+        try {
+            DB::statement("
+                SELECT setval(
+                    pg_get_serial_sequence('orders', 'id'),
+                    (SELECT MAX(id) FROM orders)
+                )
+            ");
+        } catch (\Exception $e) {
+            // Ignore if table doesn't have id column
+        }
+    }
+}
